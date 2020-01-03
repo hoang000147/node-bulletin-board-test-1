@@ -6,6 +6,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
+                cd ./bulletin-board-app
                 sh 'npm install'
             }
         }
