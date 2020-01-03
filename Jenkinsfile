@@ -1,8 +1,10 @@
 pipeline {
-    //agent {dockerfile true}
+    //{dockerfile true}
     agent {
-        image 'node:6-alpine'
-        args '-p 30005:8080'
+        docker {
+            image 'node:6-alpine'
+            args '-p 30005:8080'
+        }
     }
     
     /*environment {
