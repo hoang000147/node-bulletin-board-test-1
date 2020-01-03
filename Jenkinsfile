@@ -1,5 +1,10 @@
 pipeline {
-    agent {dockerfile true}
+    //agent {dockerfile true}
+    agent {
+        image 'node:6-alpine'
+        args '-p 30005:8080'
+    }
+    
     /*environment {
         CI = 'true'
     }*/
